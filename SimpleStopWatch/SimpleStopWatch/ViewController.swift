@@ -30,6 +30,9 @@ class ViewController: UIViewController {
         timeLabel.text = String(Counter)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if Counter == 0.0 {
+            pauseButton.enabled = false;
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,12 +63,18 @@ class ViewController: UIViewController {
         Counter = 0.0
         timeLabel.text = String(Counter)
         startButton.enabled = true
-        pauseButton.enabled = true
+        pauseButton.enabled = false
     }
     
     func UpdateTimer() {
         Counter += 0.1
         timeLabel.text = String(format: "%.1f", Counter)
+        if Counter == 0.0 {
+            pauseButton.enabled = false;
+        }
+        else {
+            pauseButton.enabled = true;
+        }
     }
 
 }

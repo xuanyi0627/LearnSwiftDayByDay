@@ -24,7 +24,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjb-vb-wup">
                                         <rect key="frame" x="300" y="0.0" width="300" height="359"/>
                                         <color key="backgroundColor" red="0.4003218412399292" green="0.74412578344345093" blue="0.03635469451546669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="pauseButton"/>
                                         <connections>
                                             <action selector="pauseButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKJ-Pb-nKa"/>
                                         </connections>
@@ -32,7 +32,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHr-it-YyJ">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="359"/>
                                         <color key="backgroundColor" red="0.30923876166343689" green="0.33539840579032898" blue="0.84413349628448486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="startButton"/>
                                         <connections>
                                             <action selector="startButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2T-U5-Bcb"/>
                                         </connections>
@@ -98,4 +98,8 @@
             <point key="canvasLocation" x="245" y="322"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pauseButton" width="81" height="125"/>
+        <image name="startButton" width="133" height="152"/>
+    </resources>
 </document>
