@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarouselEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="i2l-oO-sqa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVM-IZ-CS0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XWg-vF-dFi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Cz-oG-LBD">
+                                            <rect key="frame" x="0.0" y="87" width="600" height="426"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="HJ5-Y4-kdp">
+                                                <size key="itemSize" width="300" height="400"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCell" id="eAF-lq-cn6" customClass="InterestCollectionViewCell" customModule="CarouselEffect" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="13" width="300" height="400"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-1h-88W">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                                            </imageView>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEh-Ll-71x">
+                                                                <rect key="frame" x="0.0" y="340" width="300" height="60"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BtF-RK-U5g">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love your new hair style." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoK-mb-653">
+                                                                            <rect key="frame" x="8" y="8" width="284" height="44"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="GoK-mb-653" firstAttribute="top" secondItem="BtF-RK-U5g" secondAttribute="top" constant="8" id="JM4-ib-ga7"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="GoK-mb-653" secondAttribute="trailing" constant="8" id="Qlf-tJ-LHK"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="GoK-mb-653" secondAttribute="bottom" constant="8" id="hyk-1I-hSa"/>
+                                                                        <constraint firstItem="GoK-mb-653" firstAttribute="leading" secondItem="BtF-RK-U5g" secondAttribute="leading" constant="8" id="liv-Vk-i56"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="nRr-lf-tK4"/>
+                                                                </constraints>
+                                                                <blurEffect style="extraLight"/>
+                                                            </visualEffectView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="TJE-1h-88W" firstAttribute="leading" secondItem="eAF-lq-cn6" secondAttribute="leading" id="4MV-oi-F6M"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TJE-1h-88W" secondAttribute="trailing" id="Uib-2p-AdJ"/>
+                                                        <constraint firstItem="TJE-1h-88W" firstAttribute="top" secondItem="eAF-lq-cn6" secondAttribute="top" id="mgm-t7-Ij5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TJE-1h-88W" secondAttribute="bottom" id="oIg-H9-YAX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PEh-Ll-71x" secondAttribute="trailing" id="php-3N-RyP"/>
+                                                        <constraint firstItem="PEh-Ll-71x" firstAttribute="leading" secondItem="eAF-lq-cn6" secondAttribute="leading" id="qX0-7i-5N0"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PEh-Ll-71x" secondAttribute="bottom" id="xmw-hU-NxS"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="featuredImageView" destination="TJE-1h-88W" id="yMW-A9-vMs"/>
+                                                        <outlet property="interestTitleLabel" destination="GoK-mb-653" id="4HJ-pX-R3E"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="f87-fH-COU"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="ua9-FJ-SiT"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="8Cz-oG-LBD" secondAttribute="bottom" constant="87" id="1xD-FE-9bA"/>
+                                        <constraint firstItem="8Cz-oG-LBD" firstAttribute="leading" secondItem="XWg-vF-dFi" secondAttribute="leading" id="DuN-yQ-3ca"/>
+                                        <constraint firstItem="8Cz-oG-LBD" firstAttribute="top" secondItem="XWg-vF-dFi" secondAttribute="top" constant="87" id="JCR-83-grv"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Cz-oG-LBD" secondAttribute="trailing" id="MYx-u3-kDt"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XVM-IZ-CS0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7cV-90-HjG"/>
+                            <constraint firstAttribute="trailing" secondItem="i2l-oO-sqa" secondAttribute="trailing" id="8Lc-rQ-D70"/>
+                            <constraint firstItem="XVM-IZ-CS0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BeE-Y2-NW4"/>
+                            <constraint firstAttribute="trailing" secondItem="XVM-IZ-CS0" secondAttribute="trailing" id="CA7-9C-IEy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XVM-IZ-CS0" secondAttribute="bottom" id="CDB-64-5hR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i2l-oO-sqa" secondAttribute="bottom" id="Kon-NB-pgW"/>
+                            <constraint firstItem="i2l-oO-sqa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MUZ-k4-5Vf"/>
+                            <constraint firstItem="i2l-oO-sqa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YvJ-gK-qJT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="i2l-oO-sqa" id="Vi1-ai-fwH"/>
+                        <outlet property="collectionView" destination="8Cz-oG-LBD" id="7tn-7a-qoo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue" width="375" height="667"/>
+    </resources>
+</document>
