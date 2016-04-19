@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MWd-vw-ATa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--PlayLocalVideo-->
+        <scene sceneID="ePo-Qj-hTQ">
+            <objects>
+                <tableViewController id="wPU-8Z-H8J" customClass="TableViewController" customModule="PlayLocalVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VkQ-ML-Xec">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="352" id="ha5-Rd-GQ2" customClass="VideoCell" customModule="PlayLocalVideo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="352"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ha5-Rd-GQ2" id="gt1-eN-IuL">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="352"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-sJ-5vG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="351.5"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-Vc-0Ws">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="351.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFE-k6-26Z">
+                                                    <rect key="frame" x="260" y="136" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="0P8-6O-bbJ"/>
+                                                        <constraint firstAttribute="height" constant="80" id="EbI-lh-Tl4"/>
+                                                    </constraints>
+                                                    <state key="normal" image="PlayButton"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-xs-qGp">
+                                                    <rect key="frame" x="8" y="224" width="584" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="eaF-vm-amb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-OS-n4N">
+                                                    <rect key="frame" x="8" y="253" width="584" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0RF-Id-spI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="MHo-xs-qGp" firstAttribute="top" secondItem="IFE-k6-26Z" secondAttribute="bottom" constant="8" id="4k7-Lo-Xqd"/>
+                                                <constraint firstItem="4bG-OS-n4N" firstAttribute="top" secondItem="MHo-xs-qGp" secondAttribute="bottom" constant="8" id="AYe-ho-SHW"/>
+                                                <constraint firstAttribute="trailing" secondItem="4bG-OS-n4N" secondAttribute="trailing" constant="8" id="Qg0-PM-arP"/>
+                                                <constraint firstItem="IFE-k6-26Z" firstAttribute="centerY" secondItem="dhM-Vc-0Ws" secondAttribute="centerY" id="htB-Oq-JAt"/>
+                                                <constraint firstItem="4bG-OS-n4N" firstAttribute="leading" secondItem="dhM-Vc-0Ws" secondAttribute="leading" constant="8" id="pdN-mR-pwa"/>
+                                                <constraint firstAttribute="trailing" secondItem="MHo-xs-qGp" secondAttribute="trailing" constant="8" id="q7N-UH-236"/>
+                                                <constraint firstItem="MHo-xs-qGp" firstAttribute="leading" secondItem="dhM-Vc-0Ws" secondAttribute="leading" constant="8" id="ygm-kj-Kni"/>
+                                                <constraint firstItem="IFE-k6-26Z" firstAttribute="centerX" secondItem="dhM-Vc-0Ws" secondAttribute="centerX" id="zR0-52-xen"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FdS-sJ-5vG" firstAttribute="top" secondItem="gt1-eN-IuL" secondAttribute="top" id="1wP-Lo-FZ3"/>
+                                        <constraint firstAttribute="trailing" secondItem="FdS-sJ-5vG" secondAttribute="trailing" id="3La-D8-gQi"/>
+                                        <constraint firstAttribute="trailing" secondItem="dhM-Vc-0Ws" secondAttribute="trailing" id="BEe-Il-NX3"/>
+                                        <constraint firstAttribute="bottom" secondItem="dhM-Vc-0Ws" secondAttribute="bottom" id="DuQ-ba-UPZ"/>
+                                        <constraint firstItem="dhM-Vc-0Ws" firstAttribute="leading" secondItem="gt1-eN-IuL" secondAttribute="leading" id="bjM-VK-8KK"/>
+                                        <constraint firstItem="dhM-Vc-0Ws" firstAttribute="top" secondItem="gt1-eN-IuL" secondAttribute="top" id="giM-rh-2Z4"/>
+                                        <constraint firstItem="FdS-sJ-5vG" firstAttribute="leading" secondItem="gt1-eN-IuL" secondAttribute="leading" id="pyt-F9-swQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="FdS-sJ-5vG" secondAttribute="bottom" id="zXx-jw-Qrm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bgImageView" destination="FdS-sJ-5vG" id="9hi-K1-IJB"/>
+                                    <outlet property="playButton" destination="IFE-k6-26Z" id="kvL-y2-ILb"/>
+                                    <outlet property="timeLabel" destination="4bG-OS-n4N" id="iSR-45-Iwn"/>
+                                    <outlet property="titleLabel" destination="MHo-xs-qGp" id="TA0-ph-3bF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wPU-8Z-H8J" id="olh-H8-iyc"/>
+                            <outlet property="delegate" destination="wPU-8Z-H8J" id="4cz-8a-BDK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PlayLocalVideo" id="PWq-en-BRD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4S-uX-hdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="307"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pgY-Nd-Dqa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MWd-vw-ATa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="1I0-nd-2tN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wPU-8Z-H8J" kind="relationship" relationship="rootViewController" id="pSI-RJ-Eai"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1EO-W8-h7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="307"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlayButton" width="125" height="125"/>
+        <image name="videoScreenshot01" width="375" height="220"/>
+    </resources>
+</document>
