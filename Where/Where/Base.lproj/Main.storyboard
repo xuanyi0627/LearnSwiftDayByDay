@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Where" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="cs5-Vk-sZC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMG-39-sYw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tT3-2o-VtM">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="findmylocation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbx-Dm-NDY">
+                                            <rect key="frame" x="60" y="490" width="480" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="jDW-dw-KYy"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZm-dl-cyd">
+                                            <rect key="frame" x="60" y="490" width="480" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="fNX-Bc-nqb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <state key="normal" title="Find my location">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="myLocationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5v-y8-Pbu"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Os4-d4-Ja2">
+                                            <rect key="frame" x="60" y="42" width="480" height="128"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gil-O0-hxa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="480" height="128"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Gil-O0-hxa" secondAttribute="trailing" id="4vh-uv-ddP"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gil-O0-hxa" secondAttribute="bottom" id="5Ag-b8-mYD"/>
+                                                <constraint firstItem="Gil-O0-hxa" firstAttribute="top" secondItem="Os4-d4-Ja2" secondAttribute="top" id="WO5-rZ-Lxf"/>
+                                                <constraint firstAttribute="height" constant="128" id="fjz-hy-gxc"/>
+                                                <constraint firstItem="Gil-O0-hxa" firstAttribute="leading" secondItem="Os4-d4-Ja2" secondAttribute="leading" id="ntX-Cd-Jct"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cZm-dl-cyd" firstAttribute="leading" secondItem="tT3-2o-VtM" secondAttribute="leading" constant="60" id="57u-N2-UvQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Vbx-Dm-NDY" secondAttribute="bottom" constant="60" id="8mB-0C-g7U"/>
+                                        <constraint firstItem="Os4-d4-Ja2" firstAttribute="top" secondItem="tT3-2o-VtM" secondAttribute="top" constant="42" id="DaH-qD-90l"/>
+                                        <constraint firstAttribute="bottom" secondItem="cZm-dl-cyd" secondAttribute="bottom" constant="60" id="bDQ-fY-ooh"/>
+                                        <constraint firstAttribute="trailing" secondItem="cZm-dl-cyd" secondAttribute="trailing" constant="60" id="f6E-6R-IbK"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vbx-Dm-NDY" secondAttribute="trailing" constant="60" id="gYj-ZA-iXc"/>
+                                        <constraint firstItem="Os4-d4-Ja2" firstAttribute="leading" secondItem="tT3-2o-VtM" secondAttribute="leading" constant="60" id="hjZ-FP-wgo"/>
+                                        <constraint firstAttribute="trailing" secondItem="Os4-d4-Ja2" secondAttribute="trailing" constant="60" id="ktB-nc-ac1"/>
+                                        <constraint firstItem="Vbx-Dm-NDY" firstAttribute="leading" secondItem="tT3-2o-VtM" secondAttribute="leading" constant="60" id="scQ-jU-9B6"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cs5-Vk-sZC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7f7-gO-3jy"/>
+                            <constraint firstAttribute="bottom" secondItem="OMG-39-sYw" secondAttribute="bottom" id="Cmh-5m-aq7"/>
+                            <constraint firstItem="cs5-Vk-sZC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HTr-3a-PTd"/>
+                            <constraint firstItem="OMG-39-sYw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LxR-cP-dAr"/>
+                            <constraint firstAttribute="trailing" secondItem="OMG-39-sYw" secondAttribute="trailing" id="WAj-Mk-QZ4"/>
+                            <constraint firstItem="OMG-39-sYw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Z3l-LJ-dvl"/>
+                            <constraint firstAttribute="trailing" secondItem="cs5-Vk-sZC" secondAttribute="trailing" id="jA8-cI-Ejv"/>
+                            <constraint firstAttribute="bottom" secondItem="cs5-Vk-sZC" secondAttribute="bottom" id="pRT-Pb-uhl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="Gil-O0-hxa" id="8WR-aY-JZE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+        <image name="findmylocation" width="332" height="62"/>
+    </resources>
+</document>
