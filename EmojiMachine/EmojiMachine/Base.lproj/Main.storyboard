@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Hyperspace" translatesAutoresizingMaskIntoConstraints="NO" id="dy9-gs-HrP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjy-F0-JEo">
+                                <rect key="frame" x="23" y="440" width="554" height="49"/>
+                                <color key="backgroundColor" red="0.72261685132980347" green="0.99121516942977905" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="UiW-Eb-adS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ar-MR-Q2J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bingo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tih-Sw-G1J">
+                                <rect key="frame" x="23" y="521" width="554" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="6lx-ov-D9h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="26"/>
+                                <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7M-yX-5LC">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Pws-DV-Sqr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kBf-3n-EWl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bKs-0I-mOt"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Tih-Sw-G1J" secondAttribute="bottom" constant="33" id="0W3-rs-w8x"/>
+                            <constraint firstAttribute="trailing" secondItem="Tih-Sw-G1J" secondAttribute="trailing" constant="23" id="35h-tu-ark"/>
+                            <constraint firstItem="x7M-yX-5LC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3WH-DF-r9o"/>
+                            <constraint firstAttribute="trailing" secondItem="pjy-F0-JEo" secondAttribute="trailing" constant="23" id="7cr-Bg-1ja"/>
+                            <constraint firstItem="dy9-gs-HrP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7yE-MC-tIs"/>
+                            <constraint firstItem="x7M-yX-5LC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JeW-8G-v6b"/>
+                            <constraint firstItem="Tih-Sw-G1J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="23" id="Msu-Ow-70D"/>
+                            <constraint firstAttribute="trailing" secondItem="x7M-yX-5LC" secondAttribute="trailing" id="XMm-cM-fZ9"/>
+                            <constraint firstAttribute="trailing" secondItem="dy9-gs-HrP" secondAttribute="trailing" id="ffO-Sd-Es0"/>
+                            <constraint firstAttribute="bottom" secondItem="dy9-gs-HrP" secondAttribute="bottom" id="fqw-Yg-Q3X"/>
+                            <constraint firstItem="dy9-gs-HrP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hjr-Jl-has"/>
+                            <constraint firstItem="x7M-yX-5LC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oq1-hx-OEn"/>
+                            <constraint firstItem="Tih-Sw-G1J" firstAttribute="top" secondItem="pjy-F0-JEo" secondAttribute="bottom" constant="32" id="ovF-s9-Byp"/>
+                            <constraint firstItem="pjy-F0-JEo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="23" id="yg6-Sx-a1c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emojiPickerView" destination="x7M-yX-5LC" id="y3J-ub-met"/>
+                        <outlet property="goButton" destination="pjy-F0-JEo" id="FMR-L5-oC2"/>
+                        <outlet property="resultLabel" destination="Tih-Sw-G1J" id="vja-az-Ibh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hyperspace" width="621" height="1104"/>
+    </resources>
+</document>
