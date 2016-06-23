@@ -17,11 +17,12 @@ class SecTableViewController: UITableViewController {
 
         self.tableView.rowHeight = 60
         self.tableView.estimatedRowHeight = 60
-        self.tableView.separatorStyle = .None
-        self.tableView.tableFooterView = UIView.init(frame: CGRectZero)
-        self.view.backgroundColor = UIColor.blackColor()
+        self.tableView.separatorStyle = .none
+        let zero = CGRect.init(x: 0, y: 0, width: 0, height: 0)
+        self.tableView.tableFooterView = UIView.init(frame: zero)
+        self.view.backgroundColor = UIColor.black()
         
-        self.tableView.registerClass(SecTableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.register(SecTableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +30,7 @@ class SecTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animate()
         
@@ -41,38 +42,36 @@ class SecTableViewController: UITableViewController {
         let cells = tableView.visibleCells
         let h = tableView.bounds.size.height
         
-        for (index, cell) in cells.enumerate() {
-            cell.transform = CGAffineTransformMakeTranslation(0, h)
-            UIView.animateWithDuration(1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-                    cell.transform = CGAffineTransformMakeTranslation(0, 0)
+        for (index, cell) in cells.enumerated() {
+            cell.transform = CGAffineTransform(translationX: 0, y: h)
+            UIView.animate(withDuration: 1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
                 }, completion: nil)
         }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
+        
         // Configure the cell...
         cell.textLabel?.text = tableData[indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.textLabel?.font = UIFont.systemFontOfSize(15)
-        cell.textLabel?.backgroundColor = UIColor.clearColor()
-        cell.selectionStyle = .None
+        cell.textLabel?.textColor = UIColor.white()
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 15)
+        cell.textLabel?.backgroundColor = UIColor.clear()
+        cell.selectionStyle = .none
         
-
+        
         return cell
     }
  
@@ -82,8 +81,8 @@ class SecTableViewController: UITableViewController {
         return UIColor.init(red: 1, green: color, blue: 0, alpha: 1)
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = colorForIndex(indexPath.row)
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = colorForIndex(index: indexPath.row)
     }
 
     /*
